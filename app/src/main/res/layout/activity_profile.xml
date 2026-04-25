@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SignQuest Profile / Login Screen
+     Gamified, child-friendly layout using Material3 components.
+     Children enter their name, pick an avatar buddy, and tap Play!
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient_profile"
+    tools:context=".ui.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <!-- ======== WELCOME HEADER ======== -->
+
+        <!-- App Logo / Star Emoji  -->
+        <TextView
+            android:id="@+id/tvLogoEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌟"
+            android:textSize="64sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Welcome Title -->
+        <TextView
+            android:id="@+id/tvWelcomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Welcome Subtitle -->
+        <TextView
+            android:id="@+id/tvWelcomeSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_subtitle"
+            android:textSize="15sp"
+            android:textColor="#E0FFFFFF"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- ======== MAIN CARD CONTAINER ======== -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="12dp"
+            app:strokeWidth="0dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <!-- Name Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:hintTextColor="@color/colorPrimary"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="24dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_enter_name"
+                        android:inputType="textPersonName"
+                        android:maxLength="20"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Avatar Section Label -->
+                <TextView
+                    android:id="@+id/tvAvatarLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_choose_avatar"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnSurface"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Avatar Selection Row -->
+                <LinearLayout
+                    android:id="@+id/layoutAvatars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp">
+
+                    <!-- PIKACHU Avatar -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPikachu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/avatarDefaultStroke"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="16dp">
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_pikachu"
+                                android:layout_marginBottom="6dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/avatar_pikachu"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOnSurface" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- CHARMANDER Avatar -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardCharmander"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="2dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/avatarDefaultStroke"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="16dp">
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_charmander"
+                                android:layout_marginBottom="6dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/avatar_charmander"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOnSurface" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- BULBASAUR Avatar -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBulbasaur"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="2dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/avatarDefaultStroke"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="16dp">
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_bulbasaur"
+                                android:layout_marginBottom="6dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/avatar_bulbasaur"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOnSurface" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- SQUIRTLE Avatar -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardSquirtle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/avatarDefaultStroke"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="16dp">
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_squirtle"
+                                android:layout_marginBottom="6dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/avatar_squirtle"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOnSurface" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <!-- Language Selection Label -->
+                <TextView
+                    android:id="@+id/tvLanguageLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_choose_language"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnSurface"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Language Selection Row -->
+                <LinearLayout
+                    android:id="@+id/layoutLanguages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp">
+
+                    <!-- ASL -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardASL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/avatarSelectedStroke"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="14dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🇺🇸"
+                                android:textSize="32sp"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ASL"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOnSurface" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- ISL -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardISL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/avatarDefaultStroke"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="14dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🇮🇳"
+                                android:textSize="32sp"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ISL"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOnSurface" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- BSL -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBSL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/avatarDefaultStroke"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingVertical="14dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🇬🇧"
+                                android:textSize="32sp"
+                                android:layout_marginBottom="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BSL"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOnSurface" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Mute Sounds Switch -->
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchMute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mute Sounds"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnBackground"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintTop_toBottomOf="@id/cardMain"
+            app:layout_constraintBottom_toTopOf="@id/btnPlay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ======== PLAY BUTTON ======== -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlay"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="@string/btn_play"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_play_button"
+            android:stateListAnimator="@null"
+            android:elevation="8dp"
+            app:cornerRadius="32dp"
+            app:backgroundTint="@null" />
+
+        <!-- Footer tagline  -->
+        <TextView
+            android:id="@+id/tvFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn signs. Have fun. Be amazing! ✨"
+            android:textSize="12sp"
+            android:textColor="@color/textHint"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

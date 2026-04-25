@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardSign"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <!-- Emoji icon -->
+        <TextView
+            android:id="@+id/tvSignEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🤛"
+            android:textSize="28sp" />
+
+        <!-- Display label (letter/number) -->
+        <TextView
+            android:id="@+id/tvSignLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnSurface" />
+
+        <!-- Completion star -->
+        <TextView
+            android:id="@+id/tvSignStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="○"
+            android:textSize="16sp"
+            android:textColor="@color/textHint" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

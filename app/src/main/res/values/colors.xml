@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors — Warm & Playful -->
+    <color name="colorPrimary">#6C63FF</color>         <!-- Vibrant Purple -->
+    <color name="colorPrimaryDark">#524AE0</color>      <!-- Deeper Purple -->
+    <color name="colorPrimaryLight">#A29BFE</color>     <!-- Soft Lavender -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <!-- Secondary — Warm Coral -->
+    <color name="colorSecondary">#FF6B6B</color>        <!-- Soft Coral -->
+    <color name="colorSecondaryDark">#EE5A24</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!-- Tertiary — Playful Teal -->
+    <color name="colorTertiary">#00D2D3</color>         <!-- Fun Teal -->
+    <color name="colorOnTertiary">#FFFFFF</color>
+
+    <!-- Background & Surface -->
+    <color name="colorBackground">#FFF8F0</color>       <!-- Warm Cream -->
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceVariant">#F5EFFF</color>   <!-- Light Lavender -->
+    <color name="colorOnBackground">#2D3436</color>
+    <color name="colorOnSurface">#2D3436</color>
+
+    <!-- Accent Colors for Avatars -->
+    <color name="avatarPandaColor">#55EFC4</color>      <!-- Mint Green -->
+    <color name="avatarLionColor">#FFEAA7</color>       <!-- Warm Gold -->
+    <color name="avatarRabbitColor">#FD79A8</color>     <!-- Soft Pink -->
+
+    <!-- Avatar Selection Ring -->
+    <color name="avatarSelectedStroke">#6C63FF</color>
+    <color name="avatarDefaultStroke">#E0E0E0</color>
+
+    <!-- Play Button Gradient -->
+    <color name="playBtnStart">#6C63FF</color>
+    <color name="playBtnEnd">#A29BFE</color>
+
+    <!-- Utility -->
+    <color name="white">#FFFFFF</color>
+    <color name="textHint">#B2BEC3</color>
+    <color name="success">#00B894</color>
+    <color name="starYellow">#F9CA24</color>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SignQuest</string>
+
+    <!-- Profile Screen -->
+    <string name="welcome_title">Welcome to SignQuest!</string>
+    <string name="welcome_subtitle">Choose your buddy and start learning signs!</string>
+    <string name="hint_enter_name">What\'s your name, explorer?</string>
+    <string name="label_choose_avatar">Pick Your Buddy</string>
+    <string name="label_choose_language">Choose language</string>
+    <string name="avatar_pikachu">Pikachu</string>
+    <string name="avatar_charmander">Charmander</string>
+    <string name="avatar_bulbasaur">Bulbasaur</string>
+    <string name="avatar_squirtle">Squirtle</string>
+    <string name="btn_play">▶  Let\'s Play!</string>
+    <string name="error_empty_name">Oops! Please tell us your name 😊</string>
+    <string name="error_no_avatar">Pick a buddy first! 🐾</string>
+
+    <!-- Detection Screen -->
+    <string name="detection_title">Show Me a Sign!</string>
+    <string name="detection_hint">Hold your hand in front of the camera</string>
+    <string name="no_hand_detected">I can\'t see your hand yet…</string>
+
+    <!-- General -->
+    <string name="loading">Getting ready…</string>
+
+    <!-- User Select Screen -->
+    <string name="user_select_title">Who\'s Playing?</string>
+    <string name="user_select_subtitle">Tap your name to continue your quest!</string>
+    <string name="btn_new_explorer">➕  New Explorer</string>
+</resources>

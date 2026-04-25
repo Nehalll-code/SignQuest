@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SignQuest User Select Screen — "Who's Playing?" -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient_profile"
+    tools:context=".ui.UserSelectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <!-- Logo -->
+        <TextView
+            android:id="@+id/tvLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌟"
+            android:textSize="64sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_select_title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_select_subtitle"
+            android:textSize="15sp"
+            android:textColor="#E0FFFFFF"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- User Cards Container -->
+        <LinearLayout
+            android:id="@+id/layoutUserCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <!-- New Explorer Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="@string/btn_new_explorer"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_play_button"
+            android:stateListAnimator="@null"
+            android:elevation="8dp"
+            android:layout_marginTop="16dp"
+            app:cornerRadius="32dp"
+            app:backgroundTint="@null"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white" />
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Long press a profile to delete it"
+            android:textSize="12sp"
+            android:textColor="@color/textHint"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

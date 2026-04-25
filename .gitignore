@@ -1,0 +1,28 @@
+# Built files
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Android generated
+**/build/
+**/generated/
+
+# Keystore
+*.jks
+*.keystore
+
+# Navigation
+.navigation/
+
+# Lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/reports/
